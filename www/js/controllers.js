@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 
 //Controlador para login de MercadoLibre
-.controller('loginMELI', function($scope) {
+.controller('LoginMELI', function($scope) {
   response.redirect(meliObject.getAuthURL(redirect_uri))
 })
 
@@ -20,13 +20,10 @@ angular.module('starter.controllers', [])
                 template: 'Please check your credentials!'
             });
         });
-    };
-}
+    }
 
 .controller('PerfilCtrl', function($scope,$stateParams){
     console.log($stateParams);
     console.log('here');
 
-})
-
-;
+});
