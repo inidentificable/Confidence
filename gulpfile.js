@@ -8,6 +8,15 @@ var rename = require('gulp-rename');
 var sh = require('shelljs');
 var meli = require('mercadolibre');
 
+//Conecta appi MercadoLibre para login
+var meliObject = new meli.Meli(1213949921402143, 'VT2tlhth0TLDe99pojRvhtb4szSSVhhq');
+var redirect_uri = 'http://localhost:3000/success';
+var redirect_uri_success = 'http://localhost:3000';
+var callback = function(){
+  console.log('conecto!')
+};
+//fin conector MercadoLibre para login 
+
 var paths = {
   sass: ['./scss/**/*.scss']
 };

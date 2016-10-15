@@ -11,7 +11,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-  });
+  })
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -27,5 +27,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       templateUrl: 'templates/login.html',
       controller: 'LoginCtrl'
   })
-  $urlRouterProvider.otherwise('/login');
-});
+  
+  .state('enter', {
+      url: '/enter',
+      templateUrl: 'templates/login.html',
+      controller: 'LoginMELI'
+  })
+
+  $urlRouterProvider.otherwise('/login')
+})
