@@ -3,6 +3,11 @@ angular.module('starter.controllers', [])
 .controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
     $scope.data = {};
 
+    $scope.goPerfil = function(){
+        $state.go('perfil', {id:1});
+    };
+
+
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
             $state.go('tab.dash');
@@ -12,5 +17,15 @@ angular.module('starter.controllers', [])
                 template: 'Please check your credentials!'
             });
         });
-    }
-});
+    };
+})
+
+.controller('PerfilCtrl', function($scope,$stateParams){
+    console.log($stateParams);
+    console.log('here');
+
+})
+
+;
+
+

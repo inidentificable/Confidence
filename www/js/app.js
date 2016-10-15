@@ -27,5 +27,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       templateUrl: 'templates/login.html',
       controller: 'LoginCtrl'
   })
+  .state('perfil', {
+      url: '/perfil/:id',
+      templateUrl: 'templates/perfil.html',
+      controller: 'PerfilCtrl'
+  })
+
+  
   $urlRouterProvider.otherwise('/login');
 });
+
+
