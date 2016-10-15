@@ -1,7 +1,10 @@
 angular.module('starter.controllers', [])
 
-.controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
-    $scope.data = {};
+//Controlador para login de MercadoLibre
+.controller('loginMELI', function($scope) {
+  response.redirect(meliObject.getAuthURL(redirect_uri))
+})
+
 
     $scope.goPerfil = function(){
         $state.go('perfil', {id:1});
@@ -18,7 +21,7 @@ angular.module('starter.controllers', [])
             });
         });
     };
-})
+}
 
 .controller('PerfilCtrl', function($scope,$stateParams){
     console.log($stateParams);
@@ -27,5 +30,3 @@ angular.module('starter.controllers', [])
 })
 
 ;
-
-
