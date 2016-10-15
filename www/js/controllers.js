@@ -5,9 +5,11 @@ angular.module('starter.controllers', [])
   response.redirect(meliObject.getAuthURL(redirect_uri))
 })
 
+.controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
+    $scope.data = {};
 
     $scope.goPerfil = function(){
-        $state.go('perfil', {id:1});
+        $state.go('perfil', {});
     };
 
 
@@ -20,10 +22,11 @@ angular.module('starter.controllers', [])
                 template: 'Please check your credentials!'
             });
         });
-    }
+    };
+})
 
 .controller('PerfilCtrl', function($scope,$stateParams){
-    console.log($stateParams);
+    console.log('');
     console.log('here');
 
 });
