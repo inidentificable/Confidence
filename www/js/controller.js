@@ -1,5 +1,7 @@
 var modulo= angular.module('starter.controllers', [])
 
+
+
 modulo.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   $scope.loginData = {};
   
