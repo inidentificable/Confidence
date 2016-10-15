@@ -45,4 +45,27 @@ angular.module('starter.services', [])
     }
 
     return service;
+}])
+
+.service('GetUserDetailsMELIService', ['$q', '$http', function($q, $http){
+    var getUserDetails = function(codeMELI){
+        var deferred = $q.defer();
+
+        $http.get('http://10.77.70.126:3000/users/meli_authorize?code=' + codeMELI)
+            .success(function(response){ 
+                deferred.resolve(response);
+            })
+            .error(function(error){
+                deferred.refected(error);
+            });
+
+        return deferred.promise;
+    } 
+
+
+    var service = {
+        getUserDetails: getUserDetails
+    }
+
+    return service;
 }]);

@@ -39,6 +39,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       templateUrl: 'index.html',
       controller: 'LoginMELICtrl'
   })
+
+  .state('success', {
+      url: '/success',
+      templateUrl: 'index.html',
+      controller: 'LoginMELICtrl'
+  })
   
   $urlRouterProvider.otherwise('/login');
   
