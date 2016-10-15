@@ -13,32 +13,23 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="cordova.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
   </head>
   <body ng-app="starter">
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title"></h1>
-      </ion-header-bar>
-      <ion-content>
-        
-        <div class="imagen">
-          <img src="./img/CONFIDENCE.png" style="border-left-width: 30px; margin-left: 90px;">
-
-        </div>
-        <form ng-submit="showPopup()">
-          <div class="list">
-             <label class="item">
-                
-                <button   class="button button-block button-positive" type="submit" style="margin-top: 70px;">Iniciar sesion</button>
-             </label>
-          
-          </div>
-        </form>
-
-       
-
-      </ion-content>
-    </ion-pane>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view>
+      
+      
+    </ion-nav-view>
   </body>
 </html>
