@@ -25,7 +25,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
-      controller: 'PerfilCtrl'
+      controller: 'LoginMELICtrl'
   })
 
   .state('perfil', {
@@ -34,10 +34,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       controller: 'PerfilCtrl'
   })
 
-  .state('enter', {
-      url: '/enter',
-      templateUrl: 'templates/login.html',
-      controller: 'LoginMELI'
+  .state('meli', {
+      url: '/meli',
+      templateUrl: 'index.html',
+      controller: 'LoginMELICtrl'
   })
   
   $urlRouterProvider.otherwise('/login');

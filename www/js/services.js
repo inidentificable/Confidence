@@ -24,32 +24,25 @@ angular.module('starter.services', [])
     }
 })
 
-.service('LoginMELIService', function($q) {
-    return {
-        loginUser: function() {
-            var deferred = $q.defer();
-            var promise = deferred.promise;
+.service('LoginMELIService', ['$q', '$http', function($q, $http){
+    var getAuthUrl = function(callbackUrl){
+        var deferred = $q.defer();
 
-            //Conecta appi MercadoLibre para login
-            var meliObject = new meli.Meli(1213949921402143, 'VT2tlhth0TLDe99pojRvhtb4szSSVhhq');
-            var redirect_uri = 'http://localhost:8100/success';
-            var redirect_uri_success = 'http://localhost:8100';
-            var callback = function(){
-                deferred.resolve('Bienvenido a Confidence!');
-            }
-            //fin conector MercadoLibre para login 
+        $http.get('http://10.77.70.126:3000/users/get_meli_auth_url?callbackUrl=' + callbackUrl)
+            .success(function(response){ 
+                deferred.resolve(response);
+            })
+            .error(function(error){
+                deferred.refected(error);
+            });
 
-            $state.go(meliObject.getAuthURL(redirect_uri));
+        return deferred.promise;
+    } 
 
-            promise.success = function(fn) {
-                promise.then(fn);
-                return promise;
-            }
-            promise.error = function(fn) {
-                promise.then(null, fn);
-                return promise;
-            }
-            return promise;
-        }
+
+    var service = {
+        getAuthUrl: getAuthUrl
     }
-});
+
+    return service;
+}]);
