@@ -27,7 +27,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('app', {
     url: '/app',
     abstract: true,
-    templateUrl: 'templates/login1.html',
+    templateUrl: 'templates/index.html',
     controller: 'AppCtrl'
   })
 
