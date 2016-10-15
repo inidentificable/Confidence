@@ -1,10 +1,10 @@
 {
-  "name": "Confidence",
-  "short_name": "Confidence",
+  "name": "My Ionic App",
+  "short_name": "My Ionic App",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
-    "src": "confidence-logo.png",
+    "src": "icon.png",
     "sizes": "512x512",
     "type": "image/png"
   }]
